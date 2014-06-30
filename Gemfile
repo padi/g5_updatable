@@ -19,4 +19,5 @@ end
 group :test do
   gem 'fabrication'
   gem 'faker'
+  gem 'generator_spec'
 end
