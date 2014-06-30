@@ -27,7 +27,7 @@ describe G5Updatable::InstallGenerator, type: :generator do
     expect(destination_root).to have_structure {
       directory "config" do
         file "routes.rb" do
-          contains "mount G5Updatable::Engine => '/client_feed'"
+          contains "mount G5Updatable::Engine => '/g5_updatable'"
         end
       end
     }

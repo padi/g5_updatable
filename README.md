@@ -58,6 +58,12 @@ G5Updatable.setup do |config|
 end
 ```
 
+## Usage
+
+G5 Updatable exposes a POST route at `/g5_updatable/update`. When the route is
+hit, it will update/create Location and Client data based on the configuration.
+See the [G5-Hub](https://github.com/G5/g5_hub) webhook logic for further info.
+
 ## Authors
 
 * Brian Bauer / [@bbauer](https://github.com/bbauer)
