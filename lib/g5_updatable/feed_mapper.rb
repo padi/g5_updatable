@@ -8,10 +8,12 @@ class G5Updatable::FeedMapper
   end
 
   def client
-    G5Updatable::G5Client.new(client_parameters)
+    G5Updatable::G5Client.new(client_parameters) if @feed
   end
 
   def locations
+    return [] unless @feed
+
     @feed.orgs.map do |location|
       G5Updatable::G5Location.new(location_parameters(location.format))
     end

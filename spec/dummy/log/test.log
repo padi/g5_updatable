@@ -2658,3 +2658,1123 @@
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:23.386541"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:23.386541"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:23.422234"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:23.422234"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:23.448139"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:23.452259"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:23.452259"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:23.467537"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:23.471030"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:23.471030"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:23.485628"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:23.489505"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:23.489505"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:23.534185"], ["vertical", "Apartments"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Hiltontown"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.707808"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MP"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.707808"], ["urn", "g5-cl-2398223-clint-d-amore"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:24.726719"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.726719"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Jammieport"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.750579"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "NC"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.750579"], ["urn", "g5-cl-2398223-margarete-graham"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.754387"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.754387"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Kiannaburgh"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.779565"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MH"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.779565"], ["urn", "g5-cl-2398223-finn-pollich"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:24.782436"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.784070"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.784070"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Gradyton"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.842294"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MN"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.842294"], ["urn", "g5-cl-2398223-kory-stokes"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:24.845076"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.846781"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.846781"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "North Inesside"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.870685"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "OR"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.870685"], ["urn", "g5-cl-2398223-katlynn-carter-iv"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:24.873456"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.875071"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.875071"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Wildermanshire"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.899352"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "AK"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.899352"], ["urn", "g5-cl-2398223-damon-kerluke-i"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:24.902507"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.904254"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.904254"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Port Dwightbury"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.927511"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "OR"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.927511"], ["urn", "g5-cl-2398223-baby-dooley"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:24.930651"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.932470"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.932470"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Borerland"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:24.956226"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "NM"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:24.956226"], ["urn", "g5-cl-2398223-mrs-nat-becker"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1[0m  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:24.959518"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:24.961346"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:24.961346"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Abbiefurt"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.283116"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "NM"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.283116"], ["urn", "g5-cl-2398223-leatha-weber-jr"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:58.326240"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.328544"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.328544"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Port Grady"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.355019"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "SC"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.355019"], ["urn", "g5-cl-2398223-monique-kozey-ii"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:58.358373"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.360307"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.360307"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "North Laurianneberg"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.384676"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "OR"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.384676"], ["urn", "g5-cl-2398223-mr-denis-upton"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:40:58.387811"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.389575"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.389575"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "O'Haramouth"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.412483"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "FL"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.412483"], ["urn", "g5-cl-2398223-loma-lubowitz"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:58.415180"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.416933"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.416933"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Port Brendonburgh"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.472264"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "KS"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.472264"], ["urn", "g5-cl-2398223-shane-cormier"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:58.474929"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.476624"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.476624"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Mauricemouth"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.504175"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "DE"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.504175"], ["urn", "g5-cl-2398223-regan-carroll"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:40:58.506779"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.508446"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.508446"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "New Toby"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.531533"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "WA"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.531533"], ["urn", "g5-cl-2398223-gabriella-abshire"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:58.535219"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.535219"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Lake Elnoraville"], ["corporate", "f"], ["created_at", "2014-06-30 22:40:58.558967"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "LA"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:40:58.558967"], ["urn", "g5-cl-2398223-ms-gilbert-walsh"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:58.562503"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:40:58.562503"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:59.282395"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:59.282395"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:59.297839"], ["vertical", "Apartments"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:59.303056"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:59.303056"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:59.317596"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:59.320990"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:59.320990"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:59.335305"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:40:59.339219"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:59.339219"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:40:59.356220"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:40:59.359699"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:40:59.359699"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Lake Jenningsview"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.163191"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MT"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.163191"], ["urn", "g5-cl-2398223-fern-reilly"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:42:49.207590"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.207590"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "North Nasirmouth"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.236899"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "AK"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.236899"], ["urn", "g5-cl-2398223-arvel-reinger-iv"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.242646"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.242646"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Kilbackfurt"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.266435"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MI"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.266435"], ["urn", "g5-cl-2398223-jamie-wilkinson"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:42:49.269144"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.271388"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.271388"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "West Dorahaven"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.329082"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "PR"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.329082"], ["urn", "g5-cl-2398223-taya-mante"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:42:49.331898"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.333482"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.333482"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "South Muhammadshire"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.361367"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "GU"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.361367"], ["urn", "g5-cl-2398223-unique-christiansen"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:42:49.364108"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.365676"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.365676"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Volkmanhaven"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.388996"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "UT"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.388996"], ["urn", "g5-cl-2398223-allie-harvey"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:42:49.392124"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.393947"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.393947"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Port Jedberg"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.417123"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "AA"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.417123"], ["urn", "g5-cl-2398223-francisco-moore"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:42:49.420201"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.421933"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.421933"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Lake Glenda"], ["corporate", "f"], ["created_at", "2014-06-30 22:42:49.446366"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "PW"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:42:49.446366"], ["urn", "g5-cl-2398223-amaya-upton-sr"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:42:49.449541"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:49.451354"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:42:49.451354"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:42:49.991325"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:42:49.991325"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:50.010692"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:42:50.010692"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:42:50.025626"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:42:50.028830"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:42:50.028830"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:42:50.043210"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:42:50.046619"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:42:50.046619"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:42:50.061537"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:42:50.064907"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:42:50.064907"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:42:50.110137"], ["vertical", "Apartments"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "West Charity"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.538056"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "KS"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.538056"], ["urn", "g5-cl-2398223-mr-alysson-jakubowski"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:43:22.580695"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.583230"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.583230"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Colbyton"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.612311"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "NM"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.612311"], ["urn", "g5-cl-2398223-dr-marion-ondricka"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:43:22.615419"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.617207"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.617207"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "West Ashlynn"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.641727"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "TX"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.641727"], ["urn", "g5-cl-2398223-robbie-breitenberg"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "neighborhood" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["neighborhood", "River West"], ["updated_at", "2014-06-30 22:43:22.644990"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "neighborhood", "uid", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.646780"], ["name", "North Shore Oahu"], ["neighborhood", "Westwood"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.646780"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Mikelland"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.670582"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "AP"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.670582"], ["urn", "g5-cl-2398223-estella-rodriguez"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:43:22.673283"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.674967"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.674967"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Altheabury"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.728697"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "NM"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.728697"], ["urn", "g5-cl-2398223-cheyanne-heidenreich"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:43:22.731414"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.732976"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.732976"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "West Jimmyhaven"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.755904"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "VI"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.755904"], ["urn", "g5-cl-2398223-jason-goyette"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "locations" SET "name" = ?, "updated_at" = ? WHERE "locations"."id" = 1  [["name", "Hollywood"], ["updated_at", "2014-06-30 22:43:22.758578"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.760263"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.760263"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "East Lisette"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.782902"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "MS"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.782902"], ["urn", "g5-cl-2398223-alyson-bartoletti"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "locations"
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:22.786447"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.786447"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations"[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("city", "corporate", "created_at", "domain", "name", "neighborhood", "state", "uid", "updated_at", "urn") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "Ozellaville"], ["corporate", "f"], ["created_at", "2014-06-30 22:43:22.810260"], ["domain", "http://bar.com"], ["name", "Foo"], ["neighborhood", "Eastside"], ["state", "CT"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood"], ["updated_at", "2014-06-30 22:43:22.810260"], ["urn", "g5-cl-2398223-manley-kassulke"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt46-hollywood' LIMIT 1
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."uid" = 'http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("created_at", "name", "uid", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-30 22:43:22.813817"], ["name", "North Shore Oahu"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse/locations/g5-cl-1qrcyt47-north-shore-oahu"], ["updated_at", "2014-06-30 22:43:22.813817"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:43:23.585387"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:43:23.585387"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:43:23.600405"], ["vertical", "Apartments"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:23.606067"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:43:23.606067"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:43:23.623060"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:43:23.626330"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:43:23.626330"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:43:23.640691"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 22:43:23.644007"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:43:23.644007"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 22:43:23.658332"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 22:43:23.661663"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 22:43:23.661663"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction

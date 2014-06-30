@@ -4,8 +4,10 @@ require "g5_updatable/locations_updater"
 
 class G5Updatable::ClientFeedProcessor
   def self.work
-    G5Updatable::ClientUpdater.new(feed_mapper.client).update
-    G5Updatable::LocationsUpdater.new(feed_mapper.locations).update
+    if G5Updatable.client_uid
+      G5Updatable::ClientUpdater.new(feed_mapper.client).update
+      G5Updatable::LocationsUpdater.new(feed_mapper.locations).update
+    end
   end
 
   def self.feed_mapper
