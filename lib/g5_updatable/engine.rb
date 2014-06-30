@@ -15,10 +15,10 @@ module G5Updatable
                    :update_client, :update_locations
 
     self.client_uid          = nil
-    self.location_parameters = [:urn, :name]
+    self.location_parameters = [:name]
     self.client_parameters   = [:name]
     self.update_client       = false
-    self.update_locations    = false
+    self.update_locations    = true
   end
 
   def self.setup(&block)

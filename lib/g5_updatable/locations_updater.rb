@@ -20,6 +20,6 @@ private
   end
 
   def skip?(location)
-    Location.exists?(urn: location.urn) && !G5Updatable.update_locations
+    Location.exists?(uid: location.uid) && !G5Updatable.update_locations
   end
 end

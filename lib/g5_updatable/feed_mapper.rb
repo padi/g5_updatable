@@ -30,6 +30,7 @@ private
 
   def location_parameters(location)
     {
+      uid: location.uid.to_s,
       urn: location.uid.to_s.split("/").last,
       name: location.name.to_s,
       domain: location.g5_domain.to_s,

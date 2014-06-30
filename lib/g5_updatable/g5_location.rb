@@ -3,6 +3,7 @@ require "virtus"
 class G5Updatable::G5Location
   include Virtus
 
+  attribute :uid, String
   attribute :urn, String
   attribute :name, String
   attribute :domain, String
