@@ -1,5 +1,7 @@
 # G5 Updatable
 
+[![Build Status](https://travis-ci.org/G5/g5_updatable.png?branch=master)](https://travis-ci.org/G5/g5_updatable)
+
 G5 Updatable provides a solution for automatic updates of client and location
 data when modified or created in the G5 Hub.
 
