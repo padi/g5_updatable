@@ -15,3 +15,8 @@ gemspec
 group :test, :development do
   gem 'pry'
 end
+
+group :test do
+  gem 'fabrication'
+  gem 'faker'
+end

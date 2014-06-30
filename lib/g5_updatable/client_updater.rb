@@ -7,7 +7,7 @@ class G5Updatable::ClientUpdater
     return unless G5Updatable.update_client && client
 
     G5Updatable.client_parameters.each do |parameter|
-      client.send("#{parameter}=", @g5_client.send(:parameter))
+      client.send("#{parameter}=", @g5_client.send(parameter))
     end
 
     client.save

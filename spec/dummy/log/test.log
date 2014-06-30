@@ -246,3 +246,646 @@
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:11:56.756051"], ["domain", "http://bar.com"], ["name", "Hayley Streich"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:11:56.756051"], ["vertical", "Apartments"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:12:55.299022"], ["domain", "http://bar.com"], ["name", "Nikolas Kulas"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:12:55.299022"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:13:06.456380"], ["domain", "http://bar.com"], ["name", "Imani Ebert"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:13:06.456380"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:14:22.638186"], ["domain", "http://bar.com"], ["name", "Ms. Jesus Lubowitz"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:14:22.638186"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:14:36.834417"], ["domain", "http://bar.com"], ["name", "Ignatius Klein"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:14:36.834417"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:17:05.130017"], ["domain", "http://bar.com"], ["name", "Haskell Weimann"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:17:05.130017"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:17:05.139158"], ["domain", "http://bar.com"], ["name", "Annamarie Gusikowski"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:17:05.139158"], ["vertical", "Apartments"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:17:20.210446"], ["domain", "http://bar.com"], ["name", "Eva Cartwright"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:17:20.210446"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:17:20.219860"], ["domain", "http://bar.com"], ["name", "Luther Abbott MD"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:17:20.219860"], ["vertical", "Apartments"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:18:09.011271"], ["domain", "http://bar.com"], ["name", "Dr. Felicity Luettgen"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:18:09.011271"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:18:09.029890"], ["domain", "http://bar.com"], ["name", "Miss Cloyd Christiansen"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:18:09.029890"], ["vertical", "Apartments"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:18:21.355513"], ["domain", "http://bar.com"], ["name", "Norris Pacocha DDS"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:18:21.355513"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:18:21.362597"], ["domain", "http://bar.com"], ["name", "Osbaldo Littel"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:18:21.362597"], ["vertical", "Apartments"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:18:42.863390"], ["domain", "http://bar.com"], ["name", "Dr. Annamarie Russel"], ["uid", "http://g5-hub.herokuapp.com/clients/g5-c-69xp2x0-farmhouse"], ["updated_at", "2014-06-30 18:18:42.863390"], ["vertical", "Apartments"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:20:01.036356"], ["domain", "http://bar.com"], ["name", "Berneice Hane I"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:20:01.036356"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:20:23.016181"], ["domain", "http://bar.com"], ["name", "Leopold Wyman"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:20:23.016181"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:21:55.432544"], ["domain", "http://bar.com"], ["name", "Cynthia Ortiz Jr."], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:21:55.432544"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:22:19.421867"], ["domain", "http://bar.com"], ["name", "Hillard Rath"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:22:19.421867"], ["vertical", "Apartments"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:22:38.636817"], ["domain", "http://bar.com"], ["name", "Macie Schmeler"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:22:38.636817"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:23:06.152172"], ["domain", "http://bar.com"], ["name", "Lola Price"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:23:06.152172"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:23:06.210714"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:23:20.169321"], ["domain", "http://bar.com"], ["name", "Hobart Cormier"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:23:20.169321"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:23:31.498175"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:23:42.344006"], ["domain", "http://bar.com"], ["name", "Tomas Wehner"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:23:42.344006"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:23:42.402061"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:23:57.401630"], ["domain", "http://bar.com"], ["name", "Shyanne Fadel"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:23:57.401630"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:24:46.967384"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:24:54.845946"], ["domain", "http://bar.com"], ["name", "Carmela Wyman"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:24:54.845946"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:24:56.426045"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:25:20.192882"], ["domain", "http://bar.com"], ["name", "Kaylee Turner"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:25:20.192882"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:27:11.933106"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:27:17.028580"], ["domain", "http://bar.com"], ["name", "Mae Funk"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:27:17.028580"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:27:18.269044"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:27:41.251626"], ["domain", "http://bar.com"], ["name", "Christelle Harris"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:27:41.251626"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:27:42.860242"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:27:55.556695"], ["domain", "http://bar.com"], ["name", "Elwyn Collier"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:27:55.556695"], ["vertical", "Apartments"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:27:56.699901"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:28:32.486722"], ["domain", "http://bar.com"], ["name", "Elvie Block"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:28:32.486722"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:28:35.459836"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:29:53.965144"], ["domain", "http://bar.com"], ["name", "Mrs. Juston Krajcik"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:29:53.965144"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:30:34.249095"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:30:39.323140"], ["domain", "http://bar.com"], ["name", "Mrs. Kacie Braun"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:30:39.323140"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:30:40.717755"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:36:15.733399"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:15.733399"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:36:15.765027"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:15.765027"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:36:15.772439"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:15.772439"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:36:43.330587"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:43.330587"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:36:43.340432"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:43.340432"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:36:43.368951"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:36:43.372524"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:36:43.372524"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:38:14.020537"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:38:14.020537"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:38:14.028676"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:38:14.028676"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:38:14.034010"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:38:14.034010"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:39:14.861502"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:39:14.861502"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:39:14.871263"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:39:14.871263"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:39:14.874497"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:39:14.874497"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:40:12.851404"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:40:12.851404"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:40:12.908799"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:40:34.143696"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:40:34.143696"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:40:34.177721"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:40:49.175868"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:40:49.175868"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:40:49.209667"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:00.815468"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:00.815468"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:41:00.872278"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:14.502978"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:14.502978"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:41:14.536635"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:22.915725"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:22.915725"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:41:22.944531"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:22.944531"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:41:22.972506"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:22.976369"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:22.976369"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:56.432854"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:56.432854"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:41:56.465431"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:56.465431"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:41:56.496532"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:41:56.501078"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:41:56.501078"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:42:29.724409"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:42:29.724409"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:42:29.754216"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:42:29.754216"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:42:29.783282"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:42:29.787203"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:42:29.787203"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:43:11.316881"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:11.316881"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:43:11.326854"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:11.326854"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:43:11.356334"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:43:11.360801"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:11.360801"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:43:36.182695"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:36.182695"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:43:36.216593"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:43:36.222921"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:36.222921"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:43:36.246067"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:43:36.249323"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:43:36.249323"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:44:57.404654"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:44:57.404654"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:44:57.435363"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:44:57.435363"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:44:57.463269"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:44:57.467750"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:44:57.467750"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:44:57.519920"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:44:57.523941"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:44:57.523941"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:44:57.544991"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:44:57.548226"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:44:57.548226"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:44:57.569573"], ["vertical", "Apartments"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:45:37.768186"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:45:37.768186"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:45:37.799150"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:45:37.799150"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:45:37.830393"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:45:37.834386"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:45:37.834386"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:45:37.882657"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-06-30 18:45:37.886022"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:45:37.886022"], ["vertical", "Self-Storage"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:45:37.910257"], ["vertical", "Apartments"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clients" ("created_at", "domain", "name", "uid", "updated_at", "vertical") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2014-06-30 18:45:37.913711"], ["domain", "http://bar.com"], ["name", "Foo"], ["uid", "/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html"], ["updated_at", "2014-06-30 18:45:37.913711"], ["vertical", "Self-Storage"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.0ms)[0m  SELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."uid" = '/Users/brianbauer/g5/g5_updatable/spec/dummy/spec/support/client_feed.html' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "name" = ?, "updated_at" = ?, "vertical" = ? WHERE "clients"."id" = 1[0m  [["name", "Farmhouse"], ["updated_at", "2014-06-30 18:45:37.935822"], ["vertical", "Apartments"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mClient Load (0.0ms)[0m  [1mSELECT  "clients".* FROM "clients"  WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction

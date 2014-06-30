@@ -4,6 +4,7 @@ module G5Updatable
 
     config.generators do |g|
       g.test_framework :rspec
+      g.fixture_replacement :fabrication, dir: 'spec/fabricators'
       g.assets false
       g.helper false
     end
