@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = G5Updatable::VERSION
   s.authors     = ["Brian Bauer"]
   s.email       = ["brian.bauer@getg5.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of G5Updatable."
-  s.description = "TODO: Description of G5Updatable."
+  s.homepage    = "https://github.com/G5/g5_updatable"
+  s.summary     = "Client/Locations data update engine for G5 applications"
+  s.description = "Client/Locations data update engine for G5 applications"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency "virtus"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
 end
