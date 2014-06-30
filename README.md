@@ -23,16 +23,18 @@ NOT RELEASED
    bundle
    ```
 
-3. Mount the engine.
+3. Run the generator.
 
    ```ruby
-   # config/routes.rb
-   mount G5Updatable::Engine => "/client_feed"
+   rails g g5_authenticatable:install
    ```
+
+   This creates an initilizer at config/initializers/g5_updatable.rb,
+   and mounts the engine at `/g5_updatable`.
 
 ## Configuration
 
-You can cofigure options within an initializer.
+You can cofigure options within the generated initializer.
 
 ```ruby
 # config/initilizers/g5_updatable.rb
