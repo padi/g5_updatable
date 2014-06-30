@@ -39,8 +39,11 @@ You can cofigure options within the generated initializer.
 ```ruby
 # config/initilizers/g5_updatable.rb
 G5Updatable.setup do |config|
-  # path to the client feed in the G5 Hub
-  config.client_uid = #string
+  # base path to the G5 Hub
+  config.feed_endpoint = #string
+
+  # identifier of the client (urn)
+  config.client_identifier = #string
 
   # default is true. When set to true, existing locations in your app will be
   # updated with any changes made to the hub. If set to false, existing locations
@@ -60,7 +63,8 @@ end
 
 ## Usage
 
-G5 Updatable exposes a POST route at `/g5_updatable/update`. When the route is
+G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a urn
+parameter (client identifier within the hub). When the route is
 hit, it will update/create Location and Client data based on the configuration.
 See the [G5-Hub](https://github.com/G5/g5_hub) webhook logic for further info.
 

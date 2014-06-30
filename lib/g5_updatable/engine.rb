@@ -11,10 +11,11 @@ module G5Updatable
   end
 
   class << self
-    mattr_accessor :client_uid, :location_parameters, :client_parameters,
-                   :update_client, :update_locations
+    mattr_accessor :client_identifier, :feed_endpoint, :location_parameters,
+                   :client_parameters, :update_client, :update_locations
 
-    self.client_uid          = nil
+    self.client_identifier   = nil
+    self.feed_endpoint       = "http://g5-hub.herokuapp.com/clients/"
     self.location_parameters = [:name]
     self.client_parameters   = [:name]
     self.update_client       = false

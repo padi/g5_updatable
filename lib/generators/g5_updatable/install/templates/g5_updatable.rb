@@ -1,7 +1,11 @@
 G5Updatable.setup do |config|
-  # path to the client feed in the G5 Hub
+  # base path to the G5 Hub
   #
-  #config.client_uid = "..."
+  #config.feed_endpoint = "..."
+
+  # identifier of the client (urn)
+  #
+  #config.client_identifier = "..."
 
   # default is true. When set to true, existing locations in your app will be
   # updated with any changes made to the hub. If set to false, existing locations

@@ -1,11 +1,16 @@
 require "spec_helper"
 
 describe G5Updatable::ClientUpdater do
+  let(:feed_endpoint) { "#{Rails.root}/spec/support/" }
+  let(:client_identifier) { "client_feed.html" }
   let(:client_uid) { "#{Rails.root}/spec/support/client_feed.html" }
-  let(:g5_client) { G5Updatable::FeedMapper.new.client }
+  let(:g5_client) { G5Updatable::FeedMapper.new(client_identifier).client }
   let(:updater) { described_class.new(g5_client) }
 
-  before { allow(G5Updatable).to receive(:client_uid) { client_uid } }
+  before do
+    allow(G5Updatable).to receive(:feed_endpoint) { feed_endpoint }
+    allow(G5Updatable).to receive(:client_identifier) { client_identifier }
+  end
 
   describe "#update" do
     let!(:client) do

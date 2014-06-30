@@ -3,8 +3,9 @@ require "g5_updatable/g5_location"
 require "microformats2"
 
 class G5Updatable::FeedMapper
-  def initialize
-    @feed = Microformats2.parse(G5Updatable.client_uid).first
+  def initialize(urn=nil)
+    @urn  = urn || G5Updatable.client_identifier
+    @feed = Microformats2.parse(client_uid).first if @urn
   end
 
   def client
@@ -20,6 +21,10 @@ class G5Updatable::FeedMapper
   end
 
 private
+
+  def client_uid
+    "#{G5Updatable.feed_endpoint}#{@urn}" if @urn.present?
+  end
 
   def client_parameters
     {

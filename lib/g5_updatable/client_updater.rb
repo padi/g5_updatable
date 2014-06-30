@@ -16,6 +16,10 @@ class G5Updatable::ClientUpdater
 private
 
   def client
-    @client ||= Client.find_by(uid: G5Updatable.client_uid)
+    @client ||= Client.find_by(uid: client_uid) if client_uid
+  end
+
+  def client_uid
+    "#{G5Updatable.feed_endpoint}#{G5Updatable.client_identifier}"
   end
 end

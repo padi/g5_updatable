@@ -1,13 +1,16 @@
 require "spec_helper"
 
 describe G5Updatable::LocationsUpdater do
-  let(:client_uid) { "#{Rails.root}/spec/support/updated_client_feed.html" }
-  let(:locations) { G5Updatable::FeedMapper.new.locations }
+  let(:feed_endpoint) { "#{Rails.root}/spec/support/" }
+  let(:client_identifier) { "updated_client_feed.html" }
+  let(:locations) { G5Updatable::FeedMapper.new(client_identifier).locations }
   let(:g5_location) { locations.first }
   let(:updater) { described_class.new(locations) }
 
-  before { allow(G5Updatable).to receive(:client_uid) { client_uid } }
-  after { Location.destroy_all }
+  before do
+    allow(G5Updatable).to receive(:feed_endpoint) { feed_endpoint }
+    allow(G5Updatable).to receive(:client_identifier) { client_identifier }
+  end
 
   describe "#update" do
     let!(:location) do

@@ -12,28 +12,12 @@ describe G5Updatable::ClientFeedProcessor do
   describe "#work" do
     after { described_class.work }
 
-    context "a configured client uid" do
-      before { allow(G5Updatable).to receive(:client_uid) { "http://foo.com" } }
-
-      it "calls update on the client updater" do
-        expect(client_updater).to receive(:update)
-      end
-
-      it "calls update on the locations updater" do
-        expect(locations_updater).to receive(:update)
-      end
+    it "calls update on the client updater" do
+      expect(client_updater).to receive(:update)
     end
 
-    context "no configured client uid" do
-      before { allow(G5Updatable).to receive(:client_uid) { nil } }
-
-      it "does not call update on the client updater" do
-        expect(client_updater).to_not receive(:update)
-      end
-
-      it "does not call update on the locations updater" do
-        expect(locations_updater).to_not receive(:update)
-      end
+    it "calls update on the locations updater" do
+      expect(locations_updater).to receive(:update)
     end
   end
 end
