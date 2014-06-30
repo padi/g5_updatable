@@ -26,7 +26,7 @@ NOT RELEASED
 3. Run the generator.
 
    ```ruby
-   rails g g5_authenticatable:install
+   rails g g5_updatable:install
    ```
 
    This creates an initilizer at config/initializers/g5_updatable.rb,
