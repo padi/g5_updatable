@@ -12,4 +12,10 @@ class G5Updatable::ClientUpdater
 
     client.save
   end
+
+private
+
+  def client
+    @client ||= Client.find_by(uid: G5Updatable.client_uid)
+  end
 end

@@ -1,6 +1,6 @@
 class FeedMapper
-  def initialize(feed)
-    @feed = feed
+  def initialize
+    @feed = Microformats2.parse(G5Updatable.client_uid).first
   end
 
   def client

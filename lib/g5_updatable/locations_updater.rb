@@ -4,9 +4,7 @@ class G5Updatable::LocationsUpdater
   end
 
   def update
-    @locations.each do |location|
-      process(location.format) unless skip?(location.format)
-    end
+    @locations.each { |location| process(location) unless skip?(location) }
   end
 
 private
