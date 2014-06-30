@@ -1,5 +1,7 @@
-class G5Location
-  include Virtus.model
+require "virtus"
+
+class G5Updatable::G5Location
+  include Virtus
 
   attribute :urn, String
   attribute :name, String

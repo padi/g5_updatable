@@ -1,5 +1,7 @@
-class G5Client
-  include Virtus.model
+require "virtus"
+
+class G5Updatable::G5Client
+  include Virtus
 
   attribute :name, String
   attribute :vertical, String

@@ -1,6 +1,12 @@
 module G5Updatable
   class Engine < ::Rails::Engine
     isolate_namespace G5Updatable
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.assets false
+      g.helper false
+    end
   end
 
   class << self
