@@ -12,3 +12,6 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+group :test, :development do
+  gem 'pry'
+end

@@ -1,5 +1,6 @@
 require "g5_updatable/g5_client"
 require "g5_updatable/g5_location"
+require "microformats2"
 
 class G5Updatable::FeedMapper
   def initialize
