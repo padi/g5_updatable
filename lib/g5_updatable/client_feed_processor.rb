@@ -9,11 +9,15 @@ class G5Updatable::ClientFeedProcessor
   end
 
   def self.work
-    ClientUpdater.new(client_feed).update
-    LocationsUpdater.new(client_feed).update
+    ClientUpdater.new(feed_mapper.client).update
+    LocationsUpdater.new(feed_mapper.locations).update
   end
 
   def self.client_feed
     @client_feed ||= Microformats2.parse(G5Updatable.client_uid).first
+  end
+
+  def self.feed_mapper
+    @feed_mapper ||= FeedMapper.new(client_feed)
   end
 end

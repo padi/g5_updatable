@@ -4,6 +4,7 @@ PATH
     g5_updatable (0.0.1)
       microformats2
       rails (~> 4.1.2)
+      virtus
 
 GEM
   remote: https://rubygems.org/
@@ -35,7 +36,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    backports (3.3.5)
     builder (3.2.2)
+    descendants_tracker (0.0.3)
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.6.9)
@@ -91,6 +94,9 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.1)
       thread_safe (~> 0.1)
+    virtus (0.5.5)
+      backports (~> 3.3)
+      descendants_tracker (~> 0.0.1)
 
 PLATFORMS
   ruby

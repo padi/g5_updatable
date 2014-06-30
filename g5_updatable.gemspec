@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.2"
   s.add_dependency "microformats2"
+  s.add_dependency "virtus"
 
   s.add_development_dependency "sqlite3"
 end

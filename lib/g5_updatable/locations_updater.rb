@@ -1,35 +1,27 @@
-class G5Updatable::LocationsUpdater < G5Updatable::BaseUpdater
+class G5Updatable::LocationsUpdater
+  def initialize(locations)
+    @locations = locations
+  end
+
   def update
-    @feed.orgs.each do |location|
+    @locations.each do |location|
       process(location.format) unless skip?(location.format)
     end
   end
 
 private
 
-  def process(feed_location)
-    location = Location.find_or_initialize_by(uid: feed_location.uid.to_s)
+  def process(g5_location)
+    location = Location.find_or_initialize_by(uid: g5_location.uid)
 
     G5Updatable.location_parameters.each do |parameter|
-      location.send("#{parameter}=", parameter_for(location_mapping, parameter))
+      location.send("#{parameter}=", g5_location.send(parameter))
     end
 
     location.save
   end
 
-  def urn_for(location)
-    location.uid.to_s.split("/").last
-  end
-
   def skip?(location)
-    Location.exists?(urn: urn_for(location)) && create_only?
-  end
-
-  def create_only?
-    !G5Updatable.update_locations
-  end
-
-  def location_mapping
-    G5Updatable::ParameterMapping::LOCATION_MAPPING
+    Location.exists?(urn: location.urn) && !G5Updatable.update_locations
   end
 end
