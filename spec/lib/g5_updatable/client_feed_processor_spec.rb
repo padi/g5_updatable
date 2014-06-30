@@ -10,14 +10,29 @@ describe G5Updatable::ClientFeedProcessor do
   end
 
   describe "#work" do
-    after { described_class.work }
+    after { described_class.new(urn).work }
+    let(:urn) { nil }
 
-    it "calls update on the client updater" do
-      expect(client_updater).to receive(:update)
+    context "a nil urn" do
+      before { allow(G5Updatable).to receive(:client_identifier) { nil } }
+
+      it "does not call update on the client updater" do
+        expect(client_updater).to_not receive(:update)
+      end
+
+      it "does not call update on the locations updater" do
+        expect(locations_updater).to_not receive(:update)
+      end
     end
 
-    it "calls update on the locations updater" do
-      expect(locations_updater).to receive(:update)
+    context "a present urn" do
+      it "calls update on the client updater" do
+        expect(client_updater).to receive(:update)
+      end
+
+      it "calls update on the locations updater" do
+        expect(locations_updater).to receive(:update)
+      end
     end
   end
 end

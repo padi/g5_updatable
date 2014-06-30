@@ -3,8 +3,8 @@ require "g5_updatable/g5_location"
 require "microformats2"
 
 class G5Updatable::FeedMapper
-  def initialize(urn=nil)
-    @urn  = urn || G5Updatable.client_identifier
+  def initialize(urn)
+    @urn  = urn
     @feed = Microformats2.parse(client_uid).first if @urn
   end
 
@@ -13,7 +13,7 @@ class G5Updatable::FeedMapper
   end
 
   def locations
-    return [] unless @feed
+    return [] if @feed.blank?
 
     @feed.orgs.map do |location|
       G5Updatable::G5Location.new(location_parameters(location.format))
