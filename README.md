@@ -48,7 +48,7 @@ G5Updatable.setup do |config|
   # default is false. When set to true, client data will update.
   config.update_client = #boolean
 
-  # default is [:urn, :name]. A whitlist of parameters to update on the model
+  # default is [:name]. A whitlist of parameters to create/update on the model
   config.location_parameters = #array of symbols
 
   # default is [:name]. A whitlist of parameters to update on the model
@@ -71,6 +71,12 @@ end
 
 If you find bugs, have feature requests or questions, please
 [file an issue](https://github.com/G5/g5_updatable/issues).
+
+## Specs
+
+```bash
+$ rspec spec
+```
 
 ## License
 
