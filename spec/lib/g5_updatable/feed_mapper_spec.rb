@@ -91,6 +91,10 @@ describe G5Updatable::FeedMapper do
         expect(location_mapper.phone_number).to eq("555-555-5555")
       end
 
+      it "maps to the correct default_number" do
+        expect(location_mapper.default_number).to eq("555-555-5555")
+      end
+
       it "maps to the correct corporate" do
         expect(location_mapper.corporate).to eq("False")
       end
