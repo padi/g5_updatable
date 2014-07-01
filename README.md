@@ -31,7 +31,7 @@ data when modified or created in the G5 Hub.
 
 ## Configuration
 
-You can cofigure options within the generated initializer.
+You can configure options within the generated initializer.
 
 ```ruby
 # config/initilizers/g5_updatable.rb
