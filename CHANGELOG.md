@@ -1,4 +1,4 @@
-## v0.0.2 (2014-07-01)
+## v0.1.0 (2014-07-01)
 
 * Add "default number" parameter to the location updater
 
