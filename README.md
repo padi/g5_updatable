@@ -7,7 +7,7 @@ data when modified or created in the G5 Hub.
 
 ## Current Version
 
-NOT RELEASED
+0.0.1
 
 ## Installation
 
