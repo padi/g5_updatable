@@ -63,7 +63,11 @@ end
 G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a urn
 parameter (client identifier within the hub). When the route is
 hit, it will update/create Location and Client data based on the configuration.
-See the [G5-Hub](https://github.com/G5/g5_hub) webhook logic for further info.
+
+G5 Updatable assumes your app has a Location model with a minimum of a urn and
+name column.
+
+See the [G5-Hub](https://github.com/G5/g5_hub/lib/webhook_poster.rb) webhook logic for further info.
 
 ## Authors
 
