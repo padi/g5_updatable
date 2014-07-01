@@ -5,6 +5,7 @@ describe G5Updatable::LocationsUpdater do
   let(:client_identifier) { "updated_client_feed.html" }
   let(:locations) { G5Updatable::FeedMapper.new(client_identifier).locations }
   let(:g5_location) { locations.first }
+  let(:urn) { g5_location.uid.to_s.split("/").last }
   let(:updater) { described_class.new(locations) }
 
   before do
@@ -14,7 +15,7 @@ describe G5Updatable::LocationsUpdater do
 
   describe "#update" do
     let!(:location) do
-      Fabricate(:location, uid: g5_location.uid, name: "Foo", neighborhood: "Eastside")
+      Fabricate(:location, urn: urn, name: "Foo", neighborhood: "Eastside")
     end
 
     context "update locations disabled" do
