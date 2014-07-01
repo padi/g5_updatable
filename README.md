@@ -1,13 +1,10 @@
 # G5 Updatable
 
+[![Gem Version](https://badge.fury.io/rb/g5_updatable.svg)](http://badge.fury.io/rb/g5_updatable)
 [![Build Status](https://travis-ci.org/G5/g5_updatable.png?branch=master)](https://travis-ci.org/G5/g5_updatable)
 
 G5 Updatable provides a solution for automatic updates of client and location
 data when modified or created in the G5 Hub.
-
-## Current Version
-
-0.0.1
 
 ## Installation
 
