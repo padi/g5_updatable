@@ -13,6 +13,7 @@ class G5Updatable::G5Location
   attribute :neighborhood, String
   attribute :postal_code, String
   attribute :phone_number, String
+  attribute :default_number, String
   attribute :corporate, String
   attribute :floor_plans, String
   attribute :primary_amenity, String

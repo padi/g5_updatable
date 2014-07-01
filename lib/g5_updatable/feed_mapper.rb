@@ -47,6 +47,7 @@ private
       neighborhood: location.adr.try(:format).try(:g5_neighborhood).to_s,
       postal_code: location.adr.try(:format).try(:postal_code).to_s,
       phone_number: location.adr.try(:format).try(:tel).to_s,
+      default_number: location.adr.try(:format).try(:tel).to_s,
       corporate: location.g5_corporate.to_s,
       floor_plans: location.g5_floorplan.to_s,
       primary_amenity: location.g5_aparment_amenity_1.to_s,
