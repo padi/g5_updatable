@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    g5_updatable (0.0.1)
+    g5_updatable (0.1.0)
       microformats2
       rails (~> 4.1.0)
       virtus
@@ -36,11 +36,18 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    backports (3.3.5)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     builder (3.2.2)
     coderay (1.1.0)
-    descendants_tracker (0.0.3)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
+    equalizer (0.0.9)
     erubis (2.7.0)
     fabrication (2.11.3)
     faker (0.9.5)
@@ -50,6 +57,7 @@ GEM
       railties (>= 3.0.0)
     hike (1.2.3)
     i18n (0.6.9)
+    ice_nine (0.11.0)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -124,9 +132,11 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.2.1)
       thread_safe (~> 0.1)
-    virtus (0.5.5)
-      backports (~> 3.3)
-      descendants_tracker (~> 0.0.1)
+    virtus (1.0.2)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0.3)
+      equalizer (~> 0.0.9)
 
 PLATFORMS
   ruby
