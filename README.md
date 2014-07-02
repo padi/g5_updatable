@@ -36,12 +36,12 @@ You can configure options within the generated initializer.
 ```ruby
 # config/initilizers/g5_updatable.rb
 G5Updatable.setup do |config|
-  # base path to the G5 Hub
-  config.feed_endpoint = #string
-
-  # identifier of the client (urn)
+  # REQUIRED. identifier of the client (urn)
   config.client_identifier = #string
 
+  # Default is ""http://g5-hub.herokuapp.com/clients/". Base path to the G5 Hub
+  config.feed_endpoint = #string
+  
   # default is true. When set to true, existing locations in your app will be
   # updated with any changes made to the hub. If set to false, existing locations
   # will be skipped and only newly added locations will be created.
