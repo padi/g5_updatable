@@ -36,7 +36,8 @@ You can configure options within the generated initializer.
 ```ruby
 # config/initilizers/g5_updatable.rb
 G5Updatable.setup do |config|
-  # REQUIRED. identifier of the client (urn)
+  # Default is nil. Most likely will be coming in via the hub urn parameter.
+  # dentifier of the client (urn)
   config.client_identifier = #string
 
   # Default is ""http://g5-hub.herokuapp.com/clients/". Base path to the G5 Hub
