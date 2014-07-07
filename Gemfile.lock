@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    g5_updatable (0.1.1)
+    g5_updatable (0.2.0)
       microformats2
-      rails (= 4.1.4)
+      rails (~> 4.1.4)
       virtus
 
 GEM
