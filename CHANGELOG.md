@@ -1,4 +1,4 @@
-## v0.1.1 (2014-07-07)
+## v0.2.0 (2014-07-07)
 
 * Bump rails for a security patch
 
