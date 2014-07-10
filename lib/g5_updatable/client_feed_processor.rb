@@ -1,22 +1,14 @@
-require "g5_updatable/feed_mapper"
-require "g5_updatable/client_updater"
-require "g5_updatable/locations_updater"
-
 class G5Updatable::ClientFeedProcessor
-  def initialize(urn=nil)
-    @urn = urn || G5Updatable.client_identifier
+  attr_reader :client_uid
+
+  def initialize(client_uid=nil)
+    @client_uid = client_uid || ENV["CLIENT_UID"]
+    raise "A client_uid must be either passed in or configured!" if @client_uid.blank?
   end
 
   def work
-    if @urn
-      G5Updatable::ClientUpdater.new(feed_mapper.client).update
-      G5Updatable::LocationsUpdater.new(feed_mapper.locations).update
-    end
-  end
-
-private
-
-  def feed_mapper
-    @feed_mapper ||= G5Updatable::FeedMapper.new(@urn)
+    client = G5FoundationClient::Client.find_by_uid(@client_uid)
+    G5Updatable::ClientUpdater.new(client).update
+    G5Updatable::LocationsUpdater.new(client.locations).update
   end
 end

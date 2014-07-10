@@ -11,37 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630175330) do
+ActiveRecord::Schema.define(version: 20140709222005) do
 
-  create_table "clients", force: true do |t|
-    t.string   "uid"
-    t.string   "name"
-    t.string   "vertical"
-    t.string   "type"
-    t.string   "domain"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "locations", force: true do |t|
+  create_table "g5_updatable_clients", force: true do |t|
     t.string   "uid"
-    t.string   "name"
-    t.boolean  "corporate"
     t.string   "urn"
-    t.string   "state"
-    t.string   "city"
-    t.string   "street_address"
-    t.string   "postal_code"
-    t.string   "domain"
-    t.string   "city_slug"
-    t.string   "phone_number"
-    t.string   "neighborhood"
-    t.string   "primary_amenity"
-    t.string   "primary_landmark"
-    t.string   "qualifier"
-    t.string   "floor_plans"
+    t.json     "properties"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "g5_updatable_clients", ["uid"], name: "index_g5_updatable_clients_on_uid", using: :btree
+  add_index "g5_updatable_clients", ["urn"], name: "index_g5_updatable_clients_on_urn", using: :btree
+
+  create_table "g5_updatable_locations", force: true do |t|
+    t.string   "uid"
+    t.string   "urn"
+    t.string   "client_uid"
+    t.json     "properties"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "g5_updatable_locations", ["uid"], name: "index_g5_updatable_locations_on_uid", using: :btree
+  add_index "g5_updatable_locations", ["urn"], name: "index_g5_updatable_locations_on_urn", using: :btree
 
 end

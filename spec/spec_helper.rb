@@ -3,12 +3,19 @@ ENV["RAILS_ENV"] ||= 'test'
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require 'rspec/rails'
+require 'rspec/its'
+
+require 'generator_spec'
+require 'factory_girl'
+require 'g5_updatable/rspec'
+require 'shoulda/matchers'
+require 'g5_foundation_client/rspec'
 
 Rails.backtrace_cleaner.remove_silencers!
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+Dir[G5Updatable::Engine.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.

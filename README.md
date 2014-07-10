@@ -6,6 +6,10 @@
 G5 Updatable provides a solution for automatic updates of client and location
 data when modified or created in the G5 Hub.
 
+## Requirements
+
+G5 Updatable makes use of PostgrSQL's `json` field type, and so only supports implementing apps that also use PostgreSQL.
+
 ## Installation
 
 1. Add this line to your application's Gemfile:
@@ -19,56 +23,27 @@ data when modified or created in the G5 Hub.
    ```console
    bundle
    ```
-
 3. Run the generator.
 
    ```ruby
    rails g g5_updatable:install
    ```
 
-   This creates an initilizer at config/initializers/g5_updatable.rb,
-   and mounts the engine at `/g5_updatable`.
+   This mounts the engine at `/g5_updatable`.
 
-## Configuration
+3. And copy the engine's migrations to your application:
 
-You can configure options within the generated initializer.
-
-```ruby
-# config/initilizers/g5_updatable.rb
-G5Updatable.setup do |config|
-  # Default is nil. Most likely will be coming in via the hub urn parameter.
-  # dentifier of the client (urn)
-  config.client_identifier = #string
-
-  # Default is ""http://g5-hub.herokuapp.com/clients/". Base path to the G5 Hub
-  config.feed_endpoint = #string
-  
-  # default is true. When set to true, existing locations in your app will be
-  # updated with any changes made to the hub. If set to false, existing locations
-  # will be skipped and only newly added locations will be created.
-  config.update_locations = #boolean
-
-  # default is false. When set to true, client data will update.
-  config.update_client = #boolean
-
-  # default is [:name]. A whitlist of parameters to create/update on the model
-  config.location_parameters = #array of symbols
-
-  # default is [:name]. A whitlist of parameters to update on the model
-  config.client_parameters = #array of symbols
-end
-```
+  ```console
+    rake g5_updatable:install:migrations
+  ```
 
 ## Usage
 
-G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a urn
-parameter (client identifier within the hub). When the route is
-hit, it will update/create Location and Client data based on the configuration.
+G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a
+`client_uid` parameter (the URL for the client's detail page within the G5
+Hub). When the route is hit, it will update/create Location and Client.
 
-G5 Updatable assumes your app has a Location model with a minimum of a urn and
-name column.
-
-See the [G5-Hub](https://github.com/G5/g5_hub/lib/webhook_poster.rb) webhook logic for further info.
+See the [G5-Hub](https://github.com/G5/g5-hub/blob/master/lib/webhook_poster.rb) webhook logic for further info.
 
 ## Authors
 
@@ -87,6 +62,16 @@ If you find bugs, have feature requests or questions, please
 [file an issue](https://github.com/G5/g5_updatable/issues).
 
 ## Specs
+
+The `database.yml` for the dummy app must be created and modified to match your
+PostgreSQL configuration. If you are using the [G5 Orion
+Vagrant](https://github.com/G5/g5-orion-vagrant) image, the sample file should
+just work. You can copy it into place with:
+```bash
+$ cp spec/dummy/config/database.sample.yml spec/dummy/config/database.yml
+```
+
+Run specs via `rspec` with:
 
 ```bash
 $ rspec spec

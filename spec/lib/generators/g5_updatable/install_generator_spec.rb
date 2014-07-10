@@ -11,18 +11,6 @@ describe G5Updatable::InstallGenerator, type: :generator do
     run_generator
   end
 
-  it "should copy the g5_updatable initializer" do
-    expect(destination_root).to have_structure {
-      directory "config" do
-        directory "initializers" do
-          file "g5_updatable.rb" do
-            contains "G5Updatable.setup do |config|"
-          end
-        end
-      end
-    }
-  end
-
   it "should mount the engine" do
     expect(destination_root).to have_structure {
       directory "config" do

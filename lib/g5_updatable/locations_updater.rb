@@ -1,29 +1,22 @@
 class G5Updatable::LocationsUpdater
-  def initialize(locations)
-    @locations = locations
+  def initialize(g5_locations)
+    @g5_locations = g5_locations
   end
 
   def update
-    @locations.each { |location| process(location) unless skip?(location) }
-  end
+    @g5_locations.each do |g5_location|
+      attributes = g5_location.attributes.dup
+      uid = attributes.delete(:uid)
+      urn = attributes.delete(:urn)
+      client_uid = attributes.delete(:client_uid)
 
-private
-
-  def process(g5_location)
-    location = Location.find_or_initialize_by(urn: urn_for(g5_location))
-
-    G5Updatable.location_parameters.each do |parameter|
-      location.send("#{parameter}=", g5_location.send(parameter))
+      G5Updatable::Location.
+        find_or_initialize_by(uid: uid).
+        update_attributes!(
+          urn: urn,
+          client_uid: client_uid,
+          properties: attributes
+        )
     end
-
-    location.save
-  end
-
-  def skip?(location)
-    Location.exists?(urn: urn_for(location)) && !G5Updatable.update_locations
-  end
-
-  def urn_for(location)
-    location.uid.to_s.split("/").last
   end
 end

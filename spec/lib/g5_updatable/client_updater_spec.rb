@@ -1,58 +1,44 @@
 require "spec_helper"
 
 describe G5Updatable::ClientUpdater do
-  let(:feed_endpoint) { "#{Rails.root}/spec/support/" }
-  let(:client_identifier) { "client_feed.html" }
-  let(:client_uid) { "#{Rails.root}/spec/support/client_feed.html" }
-  let(:g5_client) { G5Updatable::FeedMapper.new(client_identifier).client }
+  let(:uid) { "http://example.com/uid" }
+  let(:g5_client) do
+    FactoryGirl.build(
+      :g5_client,
+      uid: uid,
+      urn: "urn",
+      name: "Client Name"
+    )
+  end
   let(:updater) { described_class.new(g5_client) }
 
-  before do
-    allow(G5Updatable).to receive(:feed_endpoint) { feed_endpoint }
-    allow(G5Updatable).to receive(:client_identifier) { client_identifier }
-  end
-
   describe "#update" do
-    let!(:client) do
-      Fabricate(:client, uid: client_uid, name: "Foo", vertical: "Self-Storage")
+    subject { G5Updatable::Client.first }
+
+    context "with no existing Client records" do
+      before { updater.update }
+
+      it "creates a Client" do
+        expect(G5Updatable::Client.count).to eq(1)
+      end
+
+      its(:uid) { should eq(uid) }
+      its(:urn) { should eq("urn") }
+      its(:name) { should eq("Client Name") }
     end
 
-    context "update client disabled" do
-      it "does nothing" do
-        expect(client).to_not receive(:save)
+    context "with an existing Client record" do
+      before do
+        FactoryGirl.create(:client, uid: uid, urn: "old")
         updater.update
       end
-    end
 
-    context "update client enabled" do
-      before { allow(G5Updatable).to receive(:update_client) { true } }
-
-      context "default parameters" do
-        it "updates the name attribute" do
-          expect { updater.update }.to change { client.reload.name }.
-            from("Foo").to("Farmhouse")
-        end
-
-        it "does not update other attributes" do
-          expect { updater.update }.not_to change { client.reload.vertical }
-        end
+      it "does not create a new Client" do
+        expect(G5Updatable::Client.count).to eq(1)
       end
 
-      context "custom parameters" do
-        before do
-          allow(G5Updatable).to receive(:client_parameters) { [:name, :vertical] }
-        end
-
-        it "updates the name attribute" do
-          expect { updater.update }.to change { client.reload.name }.
-            from("Foo").to("Farmhouse")
-        end
-
-        it "updates other attributes" do
-          expect { updater.update }.to change { client.reload.vertical }.
-            from("Self-Storage").to("Apartments")
-        end
-      end
+      its(:urn) { should eq("urn") }
+      its(:name) { should eq("Client Name") }
     end
   end
 end

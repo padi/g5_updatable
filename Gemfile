@@ -17,7 +17,5 @@ group :test, :development do
 end
 
 group :test do
-  gem 'fabrication'
-  gem 'faker'
-  gem 'generator_spec'
+  gem 'shoulda-matchers', require: false
 end

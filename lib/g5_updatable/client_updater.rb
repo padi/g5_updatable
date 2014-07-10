@@ -4,22 +4,13 @@ class G5Updatable::ClientUpdater
   end
 
   def update
-    return unless G5Updatable.update_client && client
+    attributes = @g5_client.attributes.dup
+    attributes.delete(:locations)
+    uid = attributes.delete(:uid)
+    urn = attributes.delete(:urn)
 
-    G5Updatable.client_parameters.each do |parameter|
-      client.send("#{parameter}=", @g5_client.send(parameter))
-    end
-
-    client.save
-  end
-
-private
-
-  def client
-    @client ||= Client.find_by(uid: client_uid) if client_uid
-  end
-
-  def client_uid
-    "#{G5Updatable.feed_endpoint}#{G5Updatable.client_identifier}"
+    G5Updatable::Client.
+      find_or_initialize_by(uid: uid).
+      update_attributes!(urn: urn, properties: attributes)
   end
 end
