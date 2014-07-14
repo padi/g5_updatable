@@ -12,4 +12,12 @@ describe G5Updatable::Location do
   it_behaves_like "a model with first-class properties" do
     let(:instance_factory_name) { :location }
   end
+
+  describe "#client" do
+    let(:client) { FactoryGirl.create(:client) }
+    let(:location)  { FactoryGirl.create(:location, client_uid: client.uid) }
+    subject { location.client }
+
+    it { should eq(client) }
+  end
 end

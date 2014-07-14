@@ -3,5 +3,9 @@ module G5Updatable
     include G5Updatable::FirstClassProperties
 
     validates :uid, :urn, :client_uid, presence: true
+
+    def client
+      @client ||= G5Updatable::Client.find_by_uid(client_uid)
+    end
   end
 end
