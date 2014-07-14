@@ -13,6 +13,10 @@ describe G5Updatable::Location do
     let(:instance_factory_name) { :location }
   end
 
+  it_behaves_like "a model that uses its URN as its parameter" do
+    let(:instance_factory_name) { :location }
+  end
+
   describe "#client" do
     let(:client) { FactoryGirl.create(:client) }
     let(:location)  { FactoryGirl.create(:location, client_uid: client.uid) }

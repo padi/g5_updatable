@@ -11,4 +11,8 @@ describe G5Updatable::Client do
   it_behaves_like "a model with first-class properties" do
     let(:instance_factory_name) { :client }
   end
+
+  it_behaves_like "a model that uses its URN as its parameter" do
+    let(:instance_factory_name) { :client }
+  end
 end
