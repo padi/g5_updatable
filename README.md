@@ -45,6 +45,26 @@ Hub). When the route is hit, it will update/create Location and Client.
 
 See the [G5-Hub](https://github.com/G5/g5-hub/blob/master/lib/webhook_poster.rb) webhook logic for further info.
 
+### Location Association
+
+You will likely have models in your own application that are associated with a Location. A module is available to include in your related models to support this association. Assuming your model has a `location_uid` string field, you can use the module as follows:
+
+```ruby
+class Foo < ActiveRecord::Base
+  include G5Updatable::BelongsToLocation
+end
+```
+
+It provides a `#location` method that will fetch the correct location.
+
+### Spec Helpers
+
+The engine provides a helper files that can be included in your project to bring in some testing support. Currently this is limited to (some factory definitions)[https://github.com/G5/g5_updatable/blob/active-record-up-in-here/lib/g5_updatable/rspec/factories.rb]. In rspec you can add the following line to your `spec/spec_helper.rb`:
+
+```ruby
+require 'g5_updatable/rspec'
+```
+
 ## Authors
 
 * Brian Bauer / [@bbauer](https://github.com/bbauer)
