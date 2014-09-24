@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.1.0"
   s.add_dependency "g5_foundation_client", ">= 0.0.4"
   s.add_dependency "pg"
+  s.add_dependency "active_model_serializers", "~> 0.8"
 
   s.add_development_dependency "rspec-rails", "~> 3.0.0"
   s.add_development_dependency "rspec-its"
