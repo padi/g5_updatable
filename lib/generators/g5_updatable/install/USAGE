@@ -4,8 +4,5 @@ Description:
 Example:
     rails generate g5_updatable:install
 
-    This will create:
-        config/initializers/g5_updatable.rb
-
     This will modify:
         config/routes.rb

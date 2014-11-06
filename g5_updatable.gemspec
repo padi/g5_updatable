@@ -17,10 +17,14 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 4.1.5"
-  s.add_dependency "microformats2"
+  s.add_dependency "rails", "~> 4.1.7"
+  s.add_dependency "g5_foundation_client", ">= 0.1.0"
+  s.add_dependency "pg"
+  s.add_dependency "active_model_serializers", "~> 0.8"
   s.add_dependency "virtus"
 
-  s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 3.0.0"
+  s.add_development_dependency "rspec-its"
+  s.add_development_dependency "factory_girl"
+  s.add_development_dependency "generator_spec"
 end

@@ -1,71 +1,48 @@
 require "spec_helper"
 
 describe G5Updatable::LocationsUpdater do
-  let(:feed_endpoint) { "#{Rails.root}/spec/support/" }
-  let(:client_identifier) { "updated_client_feed.html" }
-  let(:locations) { G5Updatable::FeedMapper.new(client_identifier).locations }
-  let(:g5_location) { locations.first }
-  let(:urn) { g5_location.uid.to_s.split("/").last }
-  let(:updater) { described_class.new(locations) }
+  let(:uid) { "http://example.com/uid" }
+  let(:properties) { {uid:        uid,
+                      urn:        "urn",
+                      client_uid: "client_uid",
+                      name:       "Location Name"} }
+  let(:g5_location) { G5FoundationClient::Location.new(properties) }
 
-  before do
-    allow(G5Updatable).to receive(:feed_endpoint) { feed_endpoint }
-    allow(G5Updatable).to receive(:client_identifier) { client_identifier }
-  end
+  let(:updater) { described_class.new([g5_location]) }
 
   describe "#update" do
-    let!(:location) do
-      Fabricate(:location, urn: urn, name: "Foo", neighborhood: "Eastside")
+    subject { G5Updatable::Location.first }
+
+    context "with no existing Location records" do
+      before { updater.update }
+
+      it "creates a Location" do
+        expect(G5Updatable::Location.count).to eq(1)
+      end
+
+
+      it 'does not redact keys in properties' do
+        expect(subject.properties.keys.collect(&:to_sym)).to eq(properties.keys)
+      end
+
+      its(:uid) { should eq(uid) }
+      its(:urn) { should eq("urn") }
+      its(:client_uid) { should eq("client_uid") }
+      its(:name) { should eq("Location Name") }
     end
 
-    context "update locations disabled" do
-      before { allow(G5Updatable).to receive(:update_locations) { false } }
-
-      it "does not update existing locations" do
-        expect(locations).to_not receive(:save)
+    context "with an existing Location record" do
+      before do
+        FactoryGirl.create(:location, uid: uid, urn: "old")
         updater.update
       end
 
-      it "creates new locations" do
-        expect { updater.update }.to change { Location.all.size }.from(1).to(2)
-      end
-    end
-
-    context "update locations enabled" do
-      context "default parameters" do
-        it "updates the name attribute" do
-          expect { updater.update }.to change { location.reload.name }.
-            from("Foo").to("Hollywood")
-        end
-
-        it "does not update other attributes" do
-          expect { updater.update }.not_to change { location.reload.neighborhood }
-        end
-
-        it "creates new locations" do
-          expect { updater.update }.to change { Location.all.size }.from(1).to(2)
-        end
+      it "does not create a new Location" do
+        expect(G5Updatable::Location.count).to eq(1)
       end
 
-      context "custom parameters" do
-        before do
-          allow(G5Updatable).to receive(:location_parameters) { [:name, :neighborhood] }
-        end
-
-        it "updates the name attribute" do
-          expect { updater.update }.to change { location.reload.name }.
-            from("Foo").to("Hollywood")
-        end
-
-        it "updates other attributes" do
-          expect { updater.update }.to change { location.reload.neighborhood }.
-            from("Eastside").to("River West")
-        end
-
-        it "creates new locations" do
-          expect { updater.update }.to change { Location.all.size }.from(1).to(2)
-        end
-      end
+      its(:urn) { should eq("urn") }
+      its(:name) { should eq("Location Name") }
     end
   end
 end

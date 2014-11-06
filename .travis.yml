@@ -1,4 +1,10 @@
-nguage: ruby
+language: ruby
 rvm:
-  - 2.1.2
+  - 2.1.4
+addons:
+  postgresql: "9.3"
+before_script:
+  - cp spec/dummy/config/database.travis.yml spec/dummy/config/database.yml
+  - psql -c 'create database g5_updatable_dummy_test;' -U postgres
+  - bundle exec rake app:db:migrate RAILS_ENV=test
 script: bundle exec rspec

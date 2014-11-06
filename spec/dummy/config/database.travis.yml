@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: g5_updatable_dummy_test
+  user: postgres

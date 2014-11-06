@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: g5_updatable_dummy_development
+  user: vagrant
+
+test:
+  adapter: postgresql
+  database: g5_updatable_dummy_test
+  user: vagrant

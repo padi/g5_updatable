@@ -6,6 +6,10 @@
 G5 Updatable provides a solution for automatic updates of client and location
 data when modified or created in the G5 Hub.
 
+## Requirements
+
+G5 Updatable makes use of PostgrSQL's `json` field type, and so only supports implementing apps that also use PostgreSQL.
+
 ## Installation
 
 1. Add this line to your application's Gemfile:
@@ -19,56 +23,53 @@ data when modified or created in the G5 Hub.
    ```console
    bundle
    ```
-
 3. Run the generator.
 
    ```ruby
    rails g g5_updatable:install
    ```
 
-   This creates an initilizer at config/initializers/g5_updatable.rb,
-   and mounts the engine at `/g5_updatable`.
+   This mounts the engine at `/g5_updatable`.
 
-## Configuration
+3. And copy the engine's migrations to your application:
 
-You can configure options within the generated initializer.
+  ```console
+    rake g5_updatable:install:migrations
+  ```
+3. Optional: load all of G5-Hub's data into your database
 
-```ruby
-# config/initilizers/g5_updatable.rb
-G5Updatable.setup do |config|
-  # Default is nil. Most likely will be coming in via the hub urn parameter.
-  # dentifier of the client (urn)
-  config.client_identifier = #string
-
-  # Default is ""http://g5-hub.herokuapp.com/clients/". Base path to the G5 Hub
-  config.feed_endpoint = #string
-  
-  # default is true. When set to true, existing locations in your app will be
-  # updated with any changes made to the hub. If set to false, existing locations
-  # will be skipped and only newly added locations will be created.
-  config.update_locations = #boolean
-
-  # default is false. When set to true, client data will update.
-  config.update_client = #boolean
-
-  # default is [:name]. A whitlist of parameters to create/update on the model
-  config.location_parameters = #array of symbols
-
-  # default is [:name]. A whitlist of parameters to update on the model
-  config.client_parameters = #array of symbols
-end
-```
+  ```console
+    rake g5_updatable:load_all
+  ```  
+  Note, all of the G5_AUTH env variables need to be set for this to work.
 
 ## Usage
 
-G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a urn
-parameter (client identifier within the hub). When the route is
-hit, it will update/create Location and Client data based on the configuration.
+G5 Updatable exposes a POST route at `/g5_updatable/update` that accepts a
+`client_uid` parameter (the URL for the client's detail page within the G5
+Hub). When the route is hit, it will update/create Location and Client.
 
-G5 Updatable assumes your app has a Location model with a minimum of a urn and
-name column.
+See the [G5-Hub](https://github.com/G5/g5-hub/blob/master/lib/webhook_poster.rb) webhook logic for further info.
 
-See the [G5-Hub](https://github.com/G5/g5_hub/lib/webhook_poster.rb) webhook logic for further info.
+### Location Association
+
+You will likely have models in your own application that are associated with a Location. A module is available to include in your related models to support this association. Assuming your model has a `location_uid` string field, you can use the module as follows:
+
+```ruby
+class Foo < ActiveRecord::Base
+  include G5Updatable::BelongsToLocation
+end
+```
+
+It provides a `#location` method that will fetch the correct location.
+
+### Spec Helpers
+
+The engine provides a helper files that can be included in your project to bring in some testing support. Currently this is limited to (some factory definitions)[https://github.com/G5/g5_updatable/blob/active-record-up-in-here/lib/g5_updatable/rspec/factories.rb]. In rspec you can add the following line to your `spec/spec_helper.rb`:
+
+```ruby
+require 'g5_updatable/rspec'
+```
 
 ## Authors
 
@@ -87,6 +88,16 @@ If you find bugs, have feature requests or questions, please
 [file an issue](https://github.com/G5/g5_updatable/issues).
 
 ## Specs
+
+The `database.yml` for the dummy app must be created and modified to match your
+PostgreSQL configuration. If you are using the [G5 Orion
+Vagrant](https://github.com/G5/g5-orion-vagrant) image, the sample file should
+just work. You can copy it into place with:
+```bash
+$ cp spec/dummy/config/database.sample.yml spec/dummy/config/database.yml
+```
+
+Run specs via `rspec` with:
 
 ```bash
 $ rspec spec
