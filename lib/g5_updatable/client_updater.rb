@@ -4,13 +4,13 @@ class G5Updatable::ClientUpdater
   end
 
   def update
-    attributes = @g5_client.attributes.dup
+    attributes = @g5_client.client_hash.dup
     attributes.delete(:locations)
-    uid = attributes.delete(:uid)
-    urn = attributes.delete(:urn)
+    uid = attributes[:uid]
+    urn = attributes[:urn]
 
     G5Updatable::Client.
-      find_or_initialize_by(uid: uid).
-      update_attributes!(urn: urn, properties: attributes)
+        find_or_initialize_by(uid: uid).
+        update_attributes!(urn: urn, properties: attributes)
   end
 end

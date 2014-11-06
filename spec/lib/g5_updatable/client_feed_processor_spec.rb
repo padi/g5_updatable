@@ -23,7 +23,7 @@ describe G5Updatable::ClientFeedProcessor do
 
     context "when CLIENT_UID is set" do
       before do
-        @old_client_uid = ENV["CLIENT_UID"]
+        @old_client_uid   = ENV["CLIENT_UID"]
         ENV["CLIENT_UID"] = "configured"
       end
       after { ENV["CLIENT_UID"] = @old_client_uid }
@@ -43,14 +43,21 @@ describe G5Updatable::ClientFeedProcessor do
   describe "#work" do
     let(:client_updater) { double(update: nil) }
     let(:locations_updater) { double(update: nil) }
+    let(:integration_settings_updater) { double(update: nil) }
 
-    let(:client) { FactoryGirl.build(:g5_client) }
+    let(:client) { G5FoundationClient::Client.new(uid:       client_uid,
+                                                  urn:       "urn",
+                                                  name:      "Client Name",
+                                                  locations: [{uid: location_uid, locations_integration_settings: [{uid: integration_setting_uid, vendor_action: 'inventory'}]}]) }
     let(:client_uid) { "http://example.com/cilent_uid" }
+    let(:location_uid) { "http://example.com/cilent_uid/locations/location_uid" }
+    let(:integration_setting_uid) { "http://example.com/cilent_uid/locations/location_uid/integration_setting_uid" }
 
     before do
       stub_client_for_uid(client_uid, client)
       allow(G5Updatable::ClientUpdater).to receive(:new) { client_updater }
       allow(G5Updatable::LocationsUpdater).to receive(:new) { locations_updater }
+      allow(G5Updatable::IntegrationSettingsUpdater).to receive(:new) { integration_settings_updater }
       G5Updatable::ClientFeedProcessor.new(client_uid).work
     end
 
@@ -62,6 +69,11 @@ describe G5Updatable::ClientFeedProcessor do
     it "updates with the client's associated locations" do
       expect(G5Updatable::LocationsUpdater).to have_received(:new).with(client.locations)
       expect(locations_updater).to have_received(:update)
+    end
+
+    it "updates with location's associated integration settings" do
+      expect(G5Updatable::IntegrationSettingsUpdater).to have_received(:new).with(client.locations.first.integration_settings)
+      expect(integration_settings_updater).to have_received(:update)
     end
   end
 end

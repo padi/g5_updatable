@@ -2,14 +2,11 @@ require "spec_helper"
 
 describe G5Updatable::ClientUpdater do
   let(:uid) { "http://example.com/uid" }
-  let(:g5_client) do
-    FactoryGirl.build(
-      :g5_client,
-      uid: uid,
-      urn: "urn",
-      name: "Client Name"
-    )
-  end
+  let(:properties) { {uid:  uid,
+                      urn:  "urn",
+                      name: "Client Name", } }
+  let(:g5_client) { G5FoundationClient::Client.new(properties) }
+
   let(:updater) { described_class.new(g5_client) }
 
   describe "#update" do
@@ -20,6 +17,10 @@ describe G5Updatable::ClientUpdater do
 
       it "creates a Client" do
         expect(G5Updatable::Client.count).to eq(1)
+      end
+
+      it 'does not redact keys in properties' do
+        expect(subject.properties.keys.collect(&:to_sym)).to eq(properties.keys)
       end
 
       its(:uid) { should eq(uid) }

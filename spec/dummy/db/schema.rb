@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140714225203) do
+ActiveRecord::Schema.define(version: 20141030211945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,22 @@ ActiveRecord::Schema.define(version: 20140714225203) do
 
   add_index "g5_updatable_clients", ["uid"], name: "index_g5_updatable_clients_on_uid", using: :btree
   add_index "g5_updatable_clients", ["urn"], name: "index_g5_updatable_clients_on_urn", using: :btree
+
+  create_table "g5_updatable_integration_settings", force: true do |t|
+    t.string   "uid"
+    t.string   "urn"
+    t.string   "location_uid"
+    t.string   "vendor_action"
+    t.integer  "job_frequency_in_minutes"
+    t.json     "properties"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "g5_updatable_integration_settings", ["location_uid", "vendor_action"], name: "g5_u_is_loc_action", using: :btree
+  add_index "g5_updatable_integration_settings", ["uid"], name: "index_g5_updatable_integration_settings_on_uid", using: :btree
+  add_index "g5_updatable_integration_settings", ["urn"], name: "index_g5_updatable_integration_settings_on_urn", using: :btree
+  add_index "g5_updatable_integration_settings", ["vendor_action"], name: "index_g5_updatable_integration_settings_on_vendor_action", using: :btree
 
   create_table "g5_updatable_locations", force: true do |t|
     t.string   "uid"

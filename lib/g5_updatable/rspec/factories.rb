@@ -11,4 +11,8 @@ FactoryGirl.define do
     urn "g5-c-1234-client"
     properties { { name: "Test Client" } }
   end
+
+  factory :integration_setting, class: G5Updatable::IntegrationSetting do
+    location_uid "http://example.com/clients/g5-c-12345-client/locations/g5-cl-12345-location"
+  end
 end
