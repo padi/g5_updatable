@@ -1,13 +1,18 @@
 require 'spec_helper'
 
 describe G5Updatable::IntegrationSetting do
-  describe "validations" do
+  describe 'validations' do
     subject(:integration_setting) { G5Updatable::IntegrationSetting.new }
     it { expect(integration_setting).to validate_presence_of(:location_uid) }
+    it { expect(integration_setting).to validate_presence_of(:uid) }
   end
 
-  it_behaves_like "a model with first-class properties" do
+  it_behaves_like 'a model with first-class properties' do
     let(:instance_factory_name) { :integration_setting }
+  end
+
+  it_behaves_like 'a model that uses its URN as its parameter' do
+    let(:instance_factory_name) { :client }
   end
 
   describe "#location" do

@@ -4,5 +4,9 @@ module G5Updatable
     include G5Updatable::UrnAsParameter
 
     validates :uid, :urn, presence: true
+
+    def locations
+      G5Updatable::Location.where(client_uid: self.uid)
+    end
   end
 end

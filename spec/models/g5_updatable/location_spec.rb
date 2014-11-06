@@ -19,9 +19,16 @@ describe G5Updatable::Location do
 
   describe "#client" do
     let(:client) { FactoryGirl.create(:client) }
-    let(:location)  { FactoryGirl.create(:location, client_uid: client.uid) }
+    let(:location) { FactoryGirl.create(:location, client_uid: client.uid) }
     subject { location.client }
 
     it { should eq(client) }
+  end
+
+  describe :integration_settings do
+    let!(:integration_setting) { create(:integration_setting, location_uid: subject.uid) }
+    subject { create(:location) }
+
+    its(:integration_settings) { is_expected.to eq([integration_setting]) }
   end
 end

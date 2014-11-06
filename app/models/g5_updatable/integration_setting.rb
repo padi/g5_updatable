@@ -1,7 +1,9 @@
 module G5Updatable
   class IntegrationSetting < ActiveRecord::Base
     include G5Updatable::FirstClassProperties
+    include G5Updatable::UrnAsParameter
 
+    validates :uid, presence: true
     validates :location_uid, presence: true
 
     INVENTORY = 'inventory'

@@ -14,5 +14,6 @@ FactoryGirl.define do
 
   factory :integration_setting, class: G5Updatable::IntegrationSetting do
     location_uid "http://example.com/clients/g5-c-12345-client/locations/g5-cl-12345-location"
+    uid "http://example.com/clients/g5-c-1234-client/locations/locey/integration_settings/2342"
   end
 end

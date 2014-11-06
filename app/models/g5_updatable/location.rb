@@ -8,5 +8,9 @@ module G5Updatable
     def client
       @client ||= G5Updatable::Client.find_by_uid(client_uid)
     end
+
+    def integration_settings
+      G5Updatable::IntegrationSetting.where(location_uid: self.uid)
+    end
   end
 end
