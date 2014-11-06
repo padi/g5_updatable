@@ -76,4 +76,18 @@ describe G5Updatable::ClientFeedProcessor do
       expect(integration_settings_updater).to have_received(:update)
     end
   end
+
+  describe :load_all_clients do
+    let(:clients_url) { 'http://g5-hub-clients-url' }
+    let(:client_uids) { %w(uid-1 uid-2) }
+    before do
+      expect(G5FoundationClient::Client).to receive(:all_client_uids).with(clients_url).and_return(client_uids)
+      expect(G5Updatable::ClientFeedProcessor).to receive(:new).with('uid-1').and_return(double(:work1, work: 'work-1'))
+      expect(G5Updatable::ClientFeedProcessor).to receive(:new).with('uid-2').and_return(double(:work1, work: 'work-2'))
+    end
+
+    it 'loads every client' do
+      expect(G5Updatable::ClientFeedProcessor.load_all_clients(clients_url)).to eq(%w(work-1 work-2))
+    end
+  end
 end

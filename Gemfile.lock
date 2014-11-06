@@ -3,7 +3,7 @@ PATH
   specs:
     g5_updatable (0.3.1)
       active_model_serializers (~> 0.8)
-      g5_foundation_client (>= 0.0.15)
+      g5_foundation_client (>= 0.1.0)
       pg
       rails (~> 4.1.5)
       virtus
@@ -64,7 +64,7 @@ GEM
       configlet (~> 2.1)
       modelish (~> 0.3)
       oauth2
-    g5_foundation_client (0.0.15)
+    g5_foundation_client (0.1.0)
       activesupport
       g5_authentication_client (>= 0.2)
       httparty

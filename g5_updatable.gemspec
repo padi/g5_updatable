@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.1.5"
-  s.add_dependency "g5_foundation_client", ">= 0.0.15"
+  s.add_dependency "g5_foundation_client", ">= 0.1.0"
   s.add_dependency "pg"
   s.add_dependency "active_model_serializers", "~> 0.8"
   s.add_dependency "virtus"
