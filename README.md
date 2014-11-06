@@ -36,6 +36,12 @@ G5 Updatable makes use of PostgrSQL's `json` field type, and so only supports im
   ```console
     rake g5_updatable:install:migrations
   ```
+3. Optional: load all of G5-Hub's data into your database
+
+  ```console
+    rake g5_updatable:load_all
+  ```  
+  Note, all of the G5_AUTH env variables need to be set for this to work.
 
 ## Usage
 
