@@ -8,7 +8,7 @@ data when modified or created in the G5 Hub.
 
 ## Requirements
 
-G5 Updatable makes use of PostgrSQL's `json` field type, and so only supports implementing apps that also use PostgreSQL.
+G5 Updatable makes use of PostgrSQL's `json` field type, and so only supports implementing apps that also use PostgreSQL 9.2 and above.
 
 ## Installation
 
